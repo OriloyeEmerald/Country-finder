@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <main>
+
+        <!-----The Header section----->
+        <header class="header" >
+               <div class="headerbar">
+                    <h3>Where in the World?</h3>
+                <div class="dark-mode">
+                    <button><i class="far fa-moon icon"></i></button>
+                    <p>Dark Mode</p>
+                </div>
+               </div>
+            </header>
+         <!-----The Header section----->
+
+
+         <!-----The search and filter section----->
+          <section class="section-1">
+            <div class="input">
+                <button><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search for a country..."  id="input">
+            </div>
+            
+            <div class="dropdown">
+                <div class="div-1" id="drophead">
+                    <p>Filter by Region</p>
+                    <button id="btn"><i class="fas fa-chevron-down icon"></i></button>
+                </div>
+
+                <div class="div-2" id="con-div">
+                    <ul class="con" id="dropcon">
+                        <li class="continent" >Africa</li>
+                        <li class="continent">America</li>
+                        <li class="continent">Asia</li>
+                        <li class="continent">Europe</li>
+                        <li class="continent">Oceania</li>
+                    </ul>
+                </div>
+            </div>
+          </section>
+
+         <!-----The search and filter----->
+
+
+
+         <!-----The countries display section----->
+           
+           <div class="countries" id="countries">
+               
+            </div>
+         <!-----countries display section----->
+          
+         <!---custom scroll-up button-->
+         <a href="#"><button class="topbtn"><i class="fas fa-chevron-up"></i></button></a>
+
+          <!-----country display section----->
+
+          
+
+    </main>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
