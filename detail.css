@@ -1,6 +1,6 @@
 .modal-div {
     margin: 60px 80px;
-
+    overflow-x: hidden;
 }
 
 .modal {
@@ -14,8 +14,16 @@
 .back-btn {
     box-shadow: 0 0 3px rgba(0, 0, 0, .2); 
     padding: .3rem 1.4rem;
-    color: black;
     border-radius: .2rem;
+    color: var(--input-dark);
+    color: var(--bgLight); 
+}
+
+.back-btn i {
+    margin-right: .6rem;
+    color: var(--input-dark);
+    color: var(--bgLight); 
+     
 }
 
 .details {
@@ -52,6 +60,15 @@
    }
    .details {
     text-align: left;
+    margin-right: 10rem;
+    font-size: 12px;
+    white-space: nowrap;
+   }
+   .infoe {
+    text-align: left;
+    margin-right: 9.2rem;
+    font-size: 12px;
+    white-space: nowrap;
    }
    img {
     width: 300px;
@@ -62,5 +79,9 @@
     display: block;
     max-height: unset;
    }
+  
 
+   .back-btn {
+     margin-right: 5rem;
+   }
 }

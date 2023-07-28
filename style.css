@@ -1,8 +1,6 @@
 @import url("https://fonts.google.com/specimen/Nunito+Sans");
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     
@@ -18,12 +16,15 @@
     --font-size: 14px;
 }
 body{
-    max-width: 1440px;
+    margin: 0;
     background: var(--bg-light);
     font-size: var(--font-size);
     font-family:"Nunito Sans", sans-serif;
     color:var(--text-light);
-    
+    overflow-x: hidden;
+    text-decoration: none;
+    width: 100%;
+    min-height:100vh ;
 }
 
 .dark {
@@ -33,60 +34,46 @@ body{
     --bgLight:hsl(0, 0%, 98%);
 }
 
-/**********navbar styling**************/
-.headerbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0;
-    margin: 0 80px;
-    padding: 1rem 0;
+
+/**********header styling**************/
+
+.header h2 {
+    font-weight: 800;
 }
 
 .header {
-    position: sticky;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    z-index: 1000;
-    background-color:hsl(0, 0%, 98%);
-    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    
 }
 
-.header:nth-child(1) {
+.head {
+    width: 100%;
+}
+
+.head:nth-child(1) {
     box-shadow: 0 0 4px rgba(0, 0, 0, .5);
     background:var(--text-dark) ;
     background: var(--inputDark);
     
 }
 
-.dark-mode {
-    display: flex;
-}
+ .fa-moon {
+   cursor: pointer;
+ }
 
 
-button{
-    background: transparent;
-    border: 0;
-    outline: none;
-}
-
- .icon {
-    cursor: pointer;
-}
-
-
- .dark-mode button i{
+ .header p i{
     padding-right: .3rem;
-    color: var(--text-light);
-    
-    
+     font-weight: 300;
 }
 
 .fas {
     color: var(--text-dark);
 }
-/**********nav styling**************/
+/**********heading styling**************/
 
 
 /********** search section styling **************/
@@ -97,11 +84,10 @@ button{
 
  
 .input {
-    width: 380px;
-    height: 45px;
+    width: 400px;
     border-radius: .2rem;
-    padding:.7rem 1.3rem;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    padding:.5rem 1.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     background: var(--text-dark);
     background: var(--inputDark);
     
@@ -110,51 +96,56 @@ button{
  
 .input input {
     background: transparent;
-    border: 0;
+    border: none;
     outline: none;
     margin-left: .7rem;
     color: var(--bgLight);
+    font-weight: 300;
 }
 .input input::placeholder {
     color: var(--bgLight);
+    font-weight: 300;
 }
-.section-1 {
+ .section-1 {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 80px;
     margin-top: 2rem;
     
-    
-}
+ }
 
 /********** search section styling **************/
 
 
 /********** dropdown section styling **************/
-.con {
+.dropcon {
     list-style-type: none;
 }
 
-.con li {
-    padding: .3rem 0;
+
+.dropcon li {
+    padding: .4rem 0;
     cursor: pointer;
     
 }
 .dropdown .div-1 {
-    width: 100%;
     border-radius: .2rem;
-    padding:.7rem 1.3rem;
-    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    padding:.1rem 1.3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--text-dark);
     background: var(--inputDark);
     cursor: pointer;
+    position: relative;
 }
 
-.dropdown .div-1 button {
+.dropdown .div-1 i{
     padding-left: 2.5rem;
+    color: var(--input-dark);
+    color: var(--bgLight); 
 }
 
 
@@ -163,27 +154,29 @@ button{
     padding:.5rem 1.3rem;
     margin-top: .2rem;
     box-shadow: 0 0 4px rgba(0, 0, 0, .3);
-     display: none; 
+    display: none; 
     position: absolute;
-    left: 78.2%;
-    top: 145px;
-    width: 215px;
+    left: 78.4%;
+    top: 155px;
+    width: 212px;
     background: var(--text-dark);
 }
+
+
 .div-dark {
     background: var(--inputDark);
 }
 
-.showDropdown {
-    display: block;
-}
+
 
 
 /**********dropdown section styling**************/
 
 
 /**********countries section styling**************/
-   
+   .showDropdown {
+    display: block;
+   }
    
    .countries {
     display: flex;
@@ -201,6 +194,7 @@ button{
       overflow: hidden;
       background: var(--inputDark);
       margin-bottom: 60px;
+      color: inherit;
       
    }
 
@@ -212,16 +206,19 @@ button{
 
 
    .info h2 {
-     padding: .8rem 0 .8rem .8rem;
+     padding: .8rem 0 .5rem .8rem;
      margin-top: .6rem;
-     color: var(--text-light);
      font-weight: 600;
+     color: var(--input-dark);
+     color: var(--bgLight); 
    }
 
     .b {
-    padding: 0 0 .4rem .8rem ;
-    color: var(--text-light);
+     padding: 0 0 .4rem .8rem ;
     font-weight: 300;
+    color: var(--input-dark);
+     color: var(--bgLight);
+     font-weight: 300; 
    }
   
    .image {
@@ -240,10 +237,10 @@ button{
     width: 12px;
   }
   ::-webkit-scrollbar-track{
-    background: var(--inputDark);
+    background: var(--input-dark);
   }
   ::-webkit-scrollbar-thumb{
-    background: var(--inputDark);
+    background: var(--input-dark);
   }
   
   
@@ -252,11 +249,11 @@ button{
     position: fixed;
     right: 2%;
     bottom: 10%;
-    width: 20px;
-    height: 20px;
-    background: var(--inputDark);
+    width: 30px;
+    height: 30px;
+    background: var(--input-dark);
     color: var(--input-dark);
-    font-size: 1.2rem;
+    font-size: .6rem;
     cursor: pointer;
     align-self: center;
     z-index: 1;
@@ -266,10 +263,84 @@ button{
 /**********media queries**************/
 
   @media(max-width: 768px) {
-      body {
-        max-width: 375px;
-      }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 40px;
+    }
+    
+    .head {
+        width: 100%;
+    }
+    
+    .head:nth-child(1) {
+        box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+        background:var(--text-dark) ;
+        background: var(--inputDark);
+        
+    }
 
+      .section-1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 80px;
+        margin-top: 2rem;
+    }
+
+    .input {
+        width: 380px;
+        border-radius: .2rem;
+        margin-left: .4rem;
+        padding: .8rem 1.5rem;
+    }
+
+    .dropdown .div-1 {
+        width: 230px;
+        margin-top: 2rem;
+        margin-right: 3rem;
+        border-radius: .2rem;
+        padding:.2rem 1rem;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .div-2 {
+        border-radius: .2rem;
+        padding:.5rem 1.3rem;
+        margin-top: .2rem;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+        display: none;
+        position: absolute;
+        left: 15%;
+        top: 275px;
+        width: 230px;
+        z-index: 1;
+        background: var(--text-dark);
+        background: var(--inputDark);
+    }
+
+    .showDropdown {
+        display: block;
+    }
+   
+
+    .topbtn {
+        position: fixed;
+        right: 8%;
+        bottom: 18%;
+        width: 30px;
+        height: 30px;
+        background: var(--input-dark);
+        color: var(--input-dark);
+        font-size: .6rem;
+        cursor: pointer;
+        align-self: center;
+        z-index: 1;
+        border-radius: .3rem;
+       }
   }
 
 /**********media queries**************/

@@ -25,7 +25,6 @@ function toggleMode() {
   async function fetchCountries() {
      const res = await fetch("https://restcountries.com/v3.1/all");
      const data = await res.json();
-     console.log(data);
      data.map(country => {
         renderCountry(country)
      });
@@ -38,7 +37,7 @@ function toggleMode() {
 function renderCountry(data) {
     const country = document.createElement('a');
     country.classList.add('country');
-    country.href = `/detail.html?name=${data.name.common}`
+    country.href = `/index.htm?name=${data.name.common}`
     country.innerHTML = ` <div class="image">
     <img src=${data.flags.svg} alt=${data.altSpellings}>
    </div>
@@ -51,7 +50,6 @@ function renderCountry(data) {
         
     </div>
  </div>`
- console.log(country);
 countries.appendChild(country)
 }
 
@@ -59,7 +57,6 @@ countries.appendChild(country)
 
 const searchbar = document.querySelector('#input');
 const countryNames = document.getElementsByClassName('countryName');
-console.log(countryNames);
 
 
 searchbar.addEventListener('input', searchFunc)
@@ -79,13 +76,11 @@ function searchFunc(e) {
 // dropdown filter function
 
 const regions = document.getElementsByClassName("regionName");
-console.log(regions);
 const continents = document.querySelectorAll(".continent");
 
 
   continents.forEach((continent) => {
     continent.addEventListener('click', () => {
-        console.log(continent);
         Array.from(regions).forEach((region) => {
             if(region.innerHTML.includes(continent.innerHTML)) {
                 
@@ -95,7 +90,7 @@ const continents = document.querySelectorAll(".continent");
              } 
              
         })
-        console.log('heyyy');
+       
     })
   })
     

@@ -32,18 +32,45 @@ function displayCountry(data) {
     subRegion.innerHTML = data.subregion;
     capital.innerHTML = data.capital;
     topLeveldomain.innerHTML = data.tld[0] ;
-    /* if(data.name.nativeName) {
-        nativeName.innerHTML = object.values(data.name.nativeName)[0].common;
-    } else {
-        nativeName.innerHTML = data.name.common
+    function extractCommonName(data) {
+        const nativename = data.nativeName;
+        for(const langCode in nativename) {
+            if(nativename[langCode].common) {
+                return nativename[langCode].common
+            }
+        }
+        return null;
     }
-   
-    if (data.currencies) {
-        currencies.innerHTML = object.values(data.currencies).map((currency) => currency.name).join(', ')
+    const commonName = extractCommonName(data.name)
+    console.log(commonName);
+    nativeName.innerHTML = commonName
+
+    
+    function extractCurrencies(data) {
+        const curr = data.currencies;
+        for(const currency in curr) {
+            if(curr[currency].name) {
+                return curr[currency].name
+            }
+        }
+        return null;
     }
-    if (data.languages) {
-        languages.innerHTML = object.values(data.currencies).join(', ')
-    } */
+    const currName = extractCurrencies(data)
+    console.log(currName)
+    currencies.innerHTML = currName;
+
+    function extractLanguages(data) {
+        const lang = data.languages;
+        for(const language in lang) {
+            if(lang[language]) {
+                return lang[language]
+            }
+        }
+        return null;
+    }
+    const langName = extractLanguages(data)
+    console.log(langName)
+    languages.innerHTML = langName;
 }
 
 
@@ -54,6 +81,6 @@ moon.addEventListener('click', toggleMode)
 function toggleMode() {
      document.body.classList.toggle('dark');
      moon.classList.toggle('fas');
-     dropdown.classList.toggle("div-dark");
+     
      
 }
