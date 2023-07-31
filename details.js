@@ -22,6 +22,7 @@ const capital = document.querySelector('.capital')
 const topLeveldomain = document.querySelector('.top-level-domain')
 const currencies = document.querySelector('.currencies')
 const languages = document.querySelector('.languages')
+const borders = document.querySelector('.borders');
 
 function displayCountry(data) {
     flagImg.src = data.flags.svg;
@@ -68,9 +69,20 @@ function displayCountry(data) {
     const langName = extractLanguages(data)
     languages.innerHTML = langName;
 
-    
+    //borders.innerHTML = data.borders;
+    // if(data.borders) {
+    //     data.borders.forEach((border) => {
+    //         console.log(border);
+    //         fetch(`https://restcountries.com/v3.1/alpha/${border}`).then((res ) => res.json())
+    //         .then(([borders]) => {
+    //             console.log([borders]);
+    //             const borderCountry = document.createComment('a')
+    //             borderCountry.innerHTML = data.name.common;
+    //             console.log(borderCountry);
+    //         })
+    //     });
+    // }
 }
-
 
 // toggle dark & light mode function
 var moon = document.querySelector(".fa-moon");
