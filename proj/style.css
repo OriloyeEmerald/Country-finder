@@ -263,11 +263,15 @@ body{
 /**********media queries**************/
 
   @media(max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 18px 40px;
+        
     }
     
     .head {
@@ -290,7 +294,7 @@ body{
     }
 
     .input {
-        width: 380px;
+        width: 330px;
         border-radius: .2rem;
         margin-left: .4rem;
         padding: .8rem 1.5rem;
@@ -321,6 +325,17 @@ body{
         background: var(--text-dark);
         background: var(--inputDark);
     }
+
+    .image {
+        width: 250px;
+      }
+
+    .image img {
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+       
+      }
 
     .showDropdown {
         display: block;

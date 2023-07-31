@@ -60,14 +60,14 @@
    }
    .details {
     text-align: left;
-    margin-right: 10rem;
-    font-size: 12px;
+    margin-right: 4rem;
+    font-size: 10px;
     white-space: nowrap;
    }
    .infoe {
     text-align: left;
-    margin-right: 9.2rem;
-    font-size: 12px;
+    margin-right: 2rem;
+    font-size: 10px;
     white-space: nowrap;
    }
    img {
@@ -80,8 +80,8 @@
     max-height: unset;
    }
   
-
-   .back-btn {
-     margin-right: 5rem;
+   #image {
+    width: 650px;
    }
+
 }
