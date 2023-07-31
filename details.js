@@ -5,7 +5,6 @@ const countryname = new URLSearchParams(location.search).get('name');
 async function getCountries(){
      const data = await fetch(`https://restcountries.com/v3.1/name/${countryname}?fullText=true`);
      const response = await data.json();
-     console.log(response[0]);
      displayCountry(response[0])
 
 }
@@ -42,7 +41,6 @@ function displayCountry(data) {
         return null;
     }
     const commonName = extractCommonName(data.name)
-    console.log(commonName);
     nativeName.innerHTML = commonName
 
     
@@ -56,7 +54,6 @@ function displayCountry(data) {
         return null;
     }
     const currName = extractCurrencies(data)
-    console.log(currName)
     currencies.innerHTML = currName;
 
     function extractLanguages(data) {
@@ -69,8 +66,9 @@ function displayCountry(data) {
         return null;
     }
     const langName = extractLanguages(data)
-    console.log(langName)
     languages.innerHTML = langName;
+
+    
 }
 
 

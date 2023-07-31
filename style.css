@@ -204,6 +204,7 @@ body{
       cursor: pointer;
       transition: 0.2s;
       margin-bottom: 60px;
+      
    }
 
    .country:hover {
@@ -214,6 +215,9 @@ body{
  
    .image {
     height: 200px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
   .image img {
@@ -272,12 +276,12 @@ body{
 
 /**********media queries**************/
 
-  @media(max-width: 480px) {
+  @media(max-width: 768px) {
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 45px;
+        padding: 12px 30px;
         font-size: 12px;
     }
     
@@ -301,7 +305,7 @@ body{
     }
 
     .search-bar {
-       width: 280px;
+       width: 350px;
     }
 
     .dropdown .div-1 {
@@ -328,11 +332,29 @@ body{
     }
 
 
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 160px;
+      overflow: hidden;
+      }
+
+
     .showDropdown {
         display: block;
     }
    
+    .info h2 {
+        font-size: 18px;
+        padding: .6rem 0 .3rem .7rem;
+    }
 
+
+    .info div p {
+        font-size: 13px;
+        padding:.0 0 .2rem .7rem ;
+    }
     .topbtn {
         position: fixed;
         right: 8%;
