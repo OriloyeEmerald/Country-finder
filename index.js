@@ -37,7 +37,7 @@ function toggleMode() {
 function renderCountry(data) {
     const country = document.createElement('a');
     country.classList.add('country');
-    country.href = `/details.html?name=${data.name.common}`
+    country.href = `details.html?name=${data.name.common}`
     country.innerHTML = ` <div class="image">
     <img src=${data.flags.svg} alt=${data.altSpellings}>
    </div>
